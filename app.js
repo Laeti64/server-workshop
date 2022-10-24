@@ -77,11 +77,11 @@ app.get("/dwarves", (req, res) => {
     return res.status(200).json(result);
   }
 
-  if (req.query.limit) {
+  if (limite) {
     return res.status(200).json(comments.slice(0, req.query.limit));
   }
 
-  if (req.query.caractere) {
+  if (caractere) {
     const filtred = comments.filter((e) => e.caractere === req.query.caractere);
     return res.status(200).json(filtred);
   }
